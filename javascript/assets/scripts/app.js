@@ -1,4 +1,7 @@
-let currentResult = 0
+const defaultResult = 0
+// We're not asigning a new value to defaultResult, we're copying
+// the value to currentResult
+let currentResult = defaultResult
 
 currentResult = ((currentResult + 10) * 3) / 2 - 1
 
