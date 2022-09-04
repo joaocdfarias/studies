@@ -1,7 +1,14 @@
+// Those variables are defined in global scope
 const defaultResult = 0
-// We're not asigning a new value to defaultResult, we're copying
-// the value to currentResult
 let currentResult = defaultResult
+
+function add(number1, number2) {
+  // This variable is defined in function scope
+  const result = number1 + number2
+  alert(result)
+}
+
+add(10, 4)
 
 currentResult = ((currentResult + 10) * 3) / 2 - 1
 
