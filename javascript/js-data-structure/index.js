@@ -1,24 +1,16 @@
-let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let averageTemp = [];
 
-Array.prototype.reIndex = function (myArray) {
-  const newArray = [];
+averageTemp[0] = [72, 75, 79, 79, 81, 81];
+averageTemp[1] = [81, 79, 75, 75, 73, 72];
 
-  for (let i = 0; i < myArray.length; i++) {
-    if (myArray[i] !== undefined) {
-      console.log(myArray[i]);
-      newArray.push(myArray[i]);
+console.log(averageTemp[0][1]);
+
+function printMatrix(myMatrix) {
+  for (let i = 0; i < myMatrix.length; i++) {
+    for (let j = 0; j < myMatrix[i].length; j++) {
+      console.log(myMatrix[i][j]);
     }
   }
+}
 
-  return newArray;
-};
-
-Array.prototype.removeFirstPosition = function () {
-  for (let i = 0; i < this.length; i++) {
-    this[i] = this[i + 1];
-  }
-
-  return this.reIndex(this)
-};
-
-numbers = numbers.removeFirstPosition()
+printMatrix(averageTemp);
