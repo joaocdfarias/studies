@@ -1,16 +1,13 @@
-let averageTemp = [];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-averageTemp[0] = [72, 75, 79, 79, 81, 81];
-averageTemp[1] = [81, 79, 75, 75, 73, 72];
+const isEven = (x) => x % 2 === 0;
 
-console.log(averageTemp[0][1]);
+console.log('Every => ', numbers.every(isEven));
+console.log('Some => ', numbers.some(isEven));
+numbers.forEach((x) => console.log(isEven(x)));
 
-function printMatrix(myMatrix) {
-  for (let i = 0; i < myMatrix.length; i++) {
-    for (let j = 0; j < myMatrix[i].length; j++) {
-      console.log(myMatrix[i][j]);
-    }
-  }
+// Every, some e forEach irão iterar a array numbers
+
+for (const number of numbers) {
+  console.log(number % 2 === 0 ? 'even' : 'odd');
 }
-
-printMatrix(averageTemp);
